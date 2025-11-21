@@ -31,3 +31,6 @@ def sendMessage(chat_id: int, text: str, **params) -> dict:
 
 def getMe() -> dict:
     return make_request("getMe")
+
+def sendPhoto(chat_id: int, photo: str, **params) -> dict:
+    return make_request("sendPhoto", chat_id=chat_id, photo=photo, **params)
